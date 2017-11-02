@@ -1,0 +1,18 @@
+page-classes {
+  text-align: center;
+
+  .time-table {
+    width: 100%;
+    th {border: 1px solid #aaa; border-top: none; background-color: #FFDD77; padding: 5px 2px}
+    td {border: 1px solid #aaa; padding: 5px 2px}
+  }
+
+
+  .options-value {
+    margin: 10px 0;
+    .separator {
+      color: #00a0fa;
+    }
+  }
+
+}

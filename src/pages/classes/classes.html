@@ -1,0 +1,149 @@
+<ion-header>
+  <ion-navbar>
+    <div class="options-value">
+      <span [innerHTML]="group"></span> <span class="separator"> | </span>
+      <span [innerHTML]="campus"></span> <span class="separator"> | </span>
+      <span [innerHTML]="event.date"></span>
+    </div>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="mode">
+      <ion-segment-button value="daily">
+        Daily
+      </ion-segment-button>
+      <ion-segment-button value="3-day">
+        3-Days
+      </ion-segment-button>
+      <ion-segment-button value="weekly">
+        Weekly
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div [ngSwitch]="mode">
+    <div *ngSwitchCase="'daily'" [innerHTML]="classesDailyTableHtml"></div>
+
+    <table *ngSwitchCase="'3-day'" class="time-table" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <th width="20%"></th>
+          <th>Monday<br>2017-05-01</th>
+          <th>Tuesday<br>2017-05-02</th>
+          <th>Wednesday<br>2017-05-03</th>
+        </tr>
+        <tr>
+          <td width="20%">07:15<br/>08:00</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td width="20%">08:15<br/>09:00</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td width="20%">09:15<br/>10:00</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td width="20%">10:15<br/>11:00</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td width="20%">11:15<br/>12:00</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td width="20%">12:15<br/>13:00</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td width="20%">13:15<br/>14:00</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td width="20%">14:15<br/>15:00</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td width="20%">15:15<br/>16:00</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td width="20%">16:15<br/>17:00</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td width="20%">17:15<br/>18:00</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td width="20%">18:15<br/>19:00</td>
+          <td></td><td></td><td></td>
+        </tr>
+    </table>
+
+    <table *ngSwitchCase="'weekly'" class="time-table" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <th width="15%"></th>
+        <th>Mon<br>05-01</th>
+        <th>Tue<br>05-02</th>
+        <th>Wed<br>05-03</th>
+        <th>Thu<br>05-04</th>
+        <th>Fri<br>05-05</th>
+        <th>Sat<br>05-06</th>
+        <th>Sun<br>05-07</th>
+      </tr>
+      <tr>
+        <td width="15%">07:15<br/>08:00</td>
+        <td></td><td></td><td></td>   <td></td><td></td><td></td>   <td></td>
+      </tr>
+      <tr>
+        <td width="15%">08:15<br/>09:00</td>
+        <td></td><td></td><td></td>   <td></td><td></td><td></td>   <td></td>
+      </tr>
+      <tr>
+        <td width="15%">09:15<br/>10:00</td>
+        <td></td><td></td><td></td>   <td></td><td></td><td></td>   <td></td>
+      </tr>
+      <tr>
+        <td width="15%">10:15<br/>11:00</td>
+        <td></td><td></td><td></td>   <td></td><td></td><td></td>   <td></td>
+      </tr>
+      <tr>
+        <td width="15%">11:15<br/>12:00</td>
+        <td></td><td></td><td></td>   <td></td><td></td><td></td>   <td></td>
+      </tr>
+      <tr>
+        <td width="15%">12:15<br/>13:00</td>
+        <td></td><td></td><td></td>   <td></td><td></td><td></td>   <td></td>
+      </tr>
+      <tr>
+        <td width="15%">13:15<br/>14:00</td>
+        <td></td><td></td><td></td>   <td></td><td></td><td></td>   <td></td>
+      </tr>
+      <tr>
+        <td width="15%">14:15<br/>15:00</td>
+        <td></td><td></td><td></td>   <td></td><td></td><td></td>   <td></td>
+      </tr>
+      <tr>
+        <td width="15%">15:15<br/>16:00</td>
+        <td></td><td></td><td></td>   <td></td><td></td><td></td>   <td></td>
+      </tr>
+      <tr>
+        <td width="15%">16:15<br/>17:00</td>
+        <td></td><td></td><td></td>   <td></td><td></td><td></td>   <td></td>
+      </tr>
+      <tr>
+        <td width="15%">17:15<br/>18:00</td>
+        <td></td><td></td><td></td>   <td></td><td></td><td></td>   <td></td>
+      </tr>
+      <tr>
+        <td width="15%">18:15<br/>19:00</td>
+        <td></td><td></td><td></td>   <td></td><td></td><td></td>   <td></td>
+      </tr>
+    </table>
+
+  </div>
+</ion-content>
